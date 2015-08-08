@@ -22,7 +22,7 @@
 			}
         }
     });
-	
+	var redCountry
 	var storedSelection
 	var selectedCountry = storedSelection || "AF"
 	var saveSelection = false
