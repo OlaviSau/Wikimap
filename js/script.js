@@ -254,7 +254,7 @@
     'ST' : 'Sao Tome And Principe',
     'SA' : 'Saudi Arabia',
     'SN' : 'Senegal',
-    'RS' : 'Serbia',
+    'CS' : 'Serbia',
     'SC' : 'Seychelles',
     'SL' : 'Sierra Leone',
     'SG' : 'Singapore',

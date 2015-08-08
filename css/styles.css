@@ -67,6 +67,7 @@ svg>g>path{
   	border-top: 1px solid #b20000;
   	border-left: 1px solid #b20000;
 	border-bottom: 1px solid #b20000;
+	box-shadow: -1px 3px 4px #aaa;
 
 
 }
@@ -104,13 +105,9 @@ svg>g>path{
     height: 18.2px;
     border-left: solid 1px #b20000;
     border-top: solid 1px #b20000;
-  	/*top: 16px; right: -25px;
-  	width: -32px;
-  	height: 17px;
-  	border-left: solid 1px #b20000;
-    border-top: solid 1px #b20000;*/
     transform: rotate(132deg) skewX(-10deg) skewY(-10deg);
   	background: linear-gradient(#b20000,#e50000);
+  	box-shadow: 0 -2px 5px #aaa;
 }
 
 
