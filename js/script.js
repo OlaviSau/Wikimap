@@ -16,7 +16,7 @@
             $( "#countries-list").append(items.join(""))
 			if(storedSelection){
 			 	$("#countries-list").val(storedSelection)
-				$("."+storedSelection).attr("class", "datamaps-subunit " + storedSelection +" redify")
+				$("." + storedSelection).attr("class", "datamaps-subunit " + storedSelection +" redify")
 				redCountry = document.getElementsByClassName("redify")[0]
 			}
         }
@@ -36,22 +36,23 @@
 			localStorage.setItem("selected-country",selectedCountry)
 		}
 		if(redCountry)
-			$(".redify").attr("class", redCountry.getAttribute("class").replace("redify", "") )
-		$("."+selectedCountry).attr("class", "datamaps-subunit " + selectedCountry +" redify")
+			$(".redify").attr("class", redCountry.getAttribute("class").replace("redify", ""))
+		$("." + selectedCountry).attr("class", "datamaps-subunit " + selectedCountry + " redify")
 		redCountry = document.getElementsByClassName("redify")[0]
 	})
 	$(".continue-button").click(function(){
 		if (saveSelection) 
 			localStorage.setItem("selected-country",selectedCountry)
-		window.location.href = "https://en.wikipedia.org/wiki/"+getCountryName(selectedCountry)
+		window.location.href = "https://en.wikipedia.org/wiki/" + getCountryName(selectedCountry)
 	})
 
     $(".datamaps-subunit").click(function(){
         var classes = $(this).attr("class").match(/\b[A-Z]{2}\b/)[0]
         $("#countries-list").val(classes)
+        selectedCountry = $("#countries-list").find("option:selected").attr("value")
         if(redCountry)
             $(".redify").attr("class", redCountry.getAttribute("class").replace("redify", "") )
-        $("."+classes).attr("class", "datamaps-subunit " + classes +" redify")
+        $("." + classes).attr("class", "datamaps-subunit " + classes + " redify")
         redCountry = document.getElementsByClassName("redify")[0]
     })
 
