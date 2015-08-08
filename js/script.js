@@ -1,7 +1,7 @@
-(function(){
+(function(url){
 	$.ajax({
         type:"GET",
-        url: "https://gist.githubusercontent.com/Keeguon/2310008/raw/865a58f59b9db2157413e7d3d949914dbf5a237d/countries.json",
+        url: url,
         success: function(data) {
         	var crappyJSON = data
 			var fixedJSON = crappyJSON.replace(/(['"])?([a-zA-Z0-9_]+)(['"])?:/g, '"$2": ')
@@ -313,4 +313,4 @@ function getCountryName (countryCode) {
         return countryCode;
     }
 }
-})()
+})("https://gist.githubusercontent.com/Keeguon/2310008/raw/865a58f59b9db2157413e7d3d949914dbf5a237d/countries.json")
