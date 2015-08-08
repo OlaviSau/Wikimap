@@ -48,6 +48,17 @@
 		window.location.href = "https://en.wikipedia.org/wiki/"+getCountryName(selectedCountry)
 	})
 
+    $(".datamaps-subunit").click(function(){
+        var classes = $(this).attr("class").match(/\b[A-Z]{2}\b/)[0]
+        $("#countries-list").val(classes)
+        if(redCountry)
+            $(".redify").attr("class", redCountry.getAttribute("class").replace("redify", "") )
+        $("."+classes).attr("class", "datamaps-subunit " + classes +" redify")
+        redCountry = document.getElementsByClassName("redify")[0]
+    })
+
+
+
 	var isoCountries = {
     'AF' : 'Afghanistan',
     'AX' : 'Aland Islands',

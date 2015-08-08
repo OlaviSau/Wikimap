@@ -22,6 +22,7 @@ button {
 }
 svg>g>path{
 	fill:#CDCDCD!important;
+	cursor: pointer;
 }
 #selection-box{
 	z-index: 1000;
@@ -49,20 +50,24 @@ svg>g>path{
 	left: 50px;
 }
 .continue-button{
+	cursor: pointer;
 	border-top-left-radius: 5px;
 	border-bottom-left-radius: 5px;
 	border-top-right-radius: 4px;
 	display: block;
 	position: relative;
-  margin-top: 20px;
-  padding-left: 34px;
-  padding-right: 14px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  background: #e50000;
-  color: white;
-  font-size: 18px;
-  border: 1px solid #b20000;
+  	margin-top: 20px;
+  	padding-left: 34px;
+  	padding-right: 14px;
+  	padding-top: 5px;
+  	padding-bottom: 5px;
+  	background: linear-gradient(#e50000,#b20000);
+  	color: white;
+  	font-size: 18px;
+  	border-top: 1px solid #b20000;
+  	border-left: 1px solid #b20000;
+	border-bottom: 1px solid #b20000;
+
 
 }
 .white-circle{
@@ -91,16 +96,23 @@ svg>g>path{
   	margin: -5px 0 0 -3px;
 }
 .continue-button:after {
+	z-index: -1;
     content: '';
-  position: absolute;
-  top: 0;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  right: -32.4px;
-  border-width: 16.7px;
-  border-color: transparent transparent transparent #e50000;
+  	position: absolute;
+  	top: 6px; right: -9px;
+    width: 18.2px;
+    height: 18.2px;
+    border-left: solid 1px #b20000;
+    border-top: solid 1px #b20000;
+  	/*top: 16px; right: -25px;
+  	width: -32px;
+  	height: 17px;
+  	border-left: solid 1px #b20000;
+    border-top: solid 1px #b20000;*/
+    transform: rotate(132deg) skewX(-10deg) skewY(-10deg);
+  	background: linear-gradient(#b20000,#e50000);
 }
+
 
 .redify.SE,
 .redify.NO,
