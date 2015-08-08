@@ -2,7 +2,6 @@
 	$.ajax({
         type:"GET",
         url: "https://gist.githubusercontent.com/Keeguon/2310008/raw/865a58f59b9db2157413e7d3d949914dbf5a237d/countries.json",
-        processData: false,
         success: function(data) {
         	var crappyJSON = data
 			var fixedJSON = crappyJSON.replace(/(['"])?([a-zA-Z0-9_]+)(['"])?:/g, '"$2": ')
