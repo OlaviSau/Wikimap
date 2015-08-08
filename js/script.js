@@ -4,8 +4,7 @@
         type:"GET",
         url: url,
         success: function(data) {
-        	var crappyJSON = data
-			var fixedJSON = crappyJSON.replace(/(['"])?([a-zA-Z0-9_]+)(['"])?:/g, '"$2": ')
+			var fixedJSON = data.replace(/(['"])?([a-zA-Z0-9_]+)(['"])?:/g, '"$2": ')
 			fixedJSON = fixedJSON.replace(/'/g, '"')//JSON parse only wants "
 			var data = JSON.parse(fixedJSON)
         	var items = []
@@ -31,12 +30,11 @@
 			saveSelection = true
 	})
 	$("#countries-list").change(function(){
-		selectedCountry = $(this).find("option:selected").attr("value")
+		updateSelection()
 		if (saveSelection) {
 			localStorage.setItem("selected-country",selectedCountry)
 		}
-		if(redCountry)
-			$(".redify").attr("class", redCountry.getAttribute("class").replace("redify", ""))
+		cleanupRedcountry
 		$("." + selectedCountry).attr("class", "datamaps-subunit " + selectedCountry + " redify")
 		redCountry = document.getElementsByClassName("redify")[0]
 	})
@@ -49,13 +47,19 @@
     $(".datamaps-subunit").click(function(){
         var classes = $(this).attr("class").match(/\b[A-Z]{2}\b/)[0]
         $("#countries-list").val(classes)
-        selectedCountry = $("#countries-list").find("option:selected").attr("value")
-        if(redCountry)
-            $(".redify").attr("class", redCountry.getAttribute("class").replace("redify", "") )
+        updateSelection()
+        cleanupRedcountry()
         $("." + classes).attr("class", "datamaps-subunit " + classes + " redify")
         redCountry = document.getElementsByClassName("redify")[0]
     })
 
+    function cleanupRedcountry(){
+        if(redCountry)
+            $(".redify").attr("class", redCountry.getAttribute("class").replace("redify", "") )
+    }
+    function updateSelection(){
+        selectedCountry = $("#countries-list").find("option:selected").attr("value") 
+    }
 
 
 	var isoCountries = {
