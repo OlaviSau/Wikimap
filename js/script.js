@@ -1,4 +1,5 @@
 (function(url){
+    var storedSelection = localStorage.getItem("selected-country")
 	$.ajax({
         type:"GET",
         url: url,
@@ -13,7 +14,6 @@
         		items.push( "<option value='" + obj.code + "'>" + obj.name + "</option>" )
         	})
             $( "#countries-list").append(items.join(""))
-            storedSelection = localStorage.getItem("selected-country")
 			if(storedSelection){
 			 	$("#countries-list").val(storedSelection)
 				$("."+storedSelection).attr("class", "datamaps-subunit " + storedSelection +" redify")
@@ -22,7 +22,6 @@
         }
     });
 	var redCountry
-	var storedSelection
 	var selectedCountry = storedSelection || "AF"
 	var saveSelection = false
 	$(".save-toggle").change(function(){
