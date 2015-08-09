@@ -317,4 +317,9 @@ function getCountryName (countryCode) {
         return countryCode;
     }
 }
+
+//UX
+$("#container").draggabilly();
+
+
 })("https://gist.githubusercontent.com/Keeguon/2310008/raw/865a58f59b9db2157413e7d3d949914dbf5a237d/countries.json")
