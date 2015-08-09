@@ -71,6 +71,7 @@ svg>g>path{
 	background: white;
 }
 .continue-button{
+	cursor: pointer;
 	background-color: transparent;
 	margin-top: 10px;
 	margin-left: -2px; 
