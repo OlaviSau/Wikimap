@@ -71,6 +71,7 @@ svg>g>path{
 	background: white;
 }
 .continue-button{
+	background-color: transparent;
 	margin-top: 10px;
 	margin-left: -2px; 
 	display: block;
@@ -87,7 +88,16 @@ svg>g>path{
   	background-repeat: no-repeat;
 }
 
-
+.SE,
+.NO,
+.FI,
+.DE,
+.FR,
+.CH,
+.AT,
+.IT{
+	fill:#999!important;
+}
 
 .redify.SE,
 .redify.NO,
