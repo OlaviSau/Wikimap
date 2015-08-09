@@ -33,7 +33,7 @@ body{
 	margin: 100px auto;
 	position: relative;
 	overflow: hidden;
-	box-shadow: 10px 10px 20px #666;
+	box-shadow: 13px 13px 20px #999;
 
 }
 
@@ -71,65 +71,22 @@ svg>g>path{
 	background: white;
 }
 .continue-button{
-	cursor: pointer;
-	border-top-left-radius: 5px;
-	border-bottom-left-radius: 5px;
-	border-top-right-radius: 4px;
+	margin-top: 10px;
+	margin-left: -2px; 
 	display: block;
-	position: relative;
-  	margin-top: 20px;
-  	padding-left: 34px;
-  	padding-right: 14px;
-  	padding-top: 5px;
-  	padding-bottom: 5px;
-  	background: linear-gradient(#e50000,#b20000);
-  	color: white;
-  	font-size: 18px;
-  	border-top: 1px solid #b20000;
-  	border-left: 1px solid #b20000;
-	border-bottom: 1px solid #b20000;
-	box-shadow: -1px 3px 4px #aaa;
+	background-image: url(../dep/img/continue.png);
+	background-position: -8px -9px;
+	color: white;
+	font-weight: 500;
+  	font-size: 16px;
+  	font-family: sans-serif;
+  	padding-left: 45px;
+  	padding-top: 6.5px;
+  	padding-right: 45px;
+  	padding-bottom: 14px;
+  	background-repeat: no-repeat;
+}
 
-
-}
-.white-circle{
-	top: 50%;
-	left: 12%;
-	position: absolute;
-	background-color: #FFF;
-	display: inline-block;
-	margin-top: -8px;
-	height: 16px;
-	width: 16px;
-	margin-right: 5px;
-	border-radius: 50%;
-
-}
-.continue-button:before {
-	z-index: 1000;
-	content: '';
-  	display: block;
-  	border-top: solid 5px transparent;
-  	border-left: solid 5px #e50000;
-  	border-bottom: solid 5px transparent;
-  	position: absolute;
-  	top: 50%;
-  	left: 20%;
-  	margin: -5px 0 0 -3px;
-}
-.continue-button:after {
-	z-index: -1;
-    content: '';
-  	position: absolute;
-  	top: 6px; right: -9px;
-    width: 18.2px;
-    height: 18.2px;
-    border-left: solid 1px #b20000;
-    border-top: solid 1px #b20000;
-    transform: rotate(132deg) skewX(-10deg) skewY(-10deg);
-  	background: linear-gradient(#b20000,#e50000);
-  	box-shadow: 2px -3px 5px #aaa;
-}
 
 
 .redify.SE,
