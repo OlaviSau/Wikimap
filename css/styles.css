@@ -33,6 +33,7 @@ body{
 	margin: 100px auto;
 	position: relative;
 	overflow: hidden;
+	box-shadow: 10px 10px 20px #666;
 
 }
 
