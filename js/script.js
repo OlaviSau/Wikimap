@@ -22,13 +22,13 @@
     });
 	var redCountry
 	var selectedCountry = storedSelection || "AF"
-	var saveSelection = false
-	$(".save-toggle").change(function(){
-		if(saveSelection)
-			saveSelection = false
-		else
-			saveSelection = true
-	})
+	var saveSelection = $(".save-toggle").is(":checked")
+    $(".save-toggle").change(function(){
+        if (!saveSelection) {
+            updateSelection()
+            localStorage.setItem("selected-country",selectedCountry)
+        }
+    })
 	$("#countries-list").change(function(){
 		updateSelection()
 		if (saveSelection) {
