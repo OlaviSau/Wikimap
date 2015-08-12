@@ -1,3 +1,5 @@
+'use strict';
+
 (function(url){
     var storedSelection = localStorage.getItem("selected-country")
 	$.ajax({
