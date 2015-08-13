@@ -21,7 +21,8 @@
 				redCountry = document.getElementsByClassName("redify")[0]
 			}
         }
-    });
+    })
+
 	var redCountry
 	var selectedCountry = storedSelection || "AF"
 	var saveSelection = $(".save-toggle").is(":checked")
@@ -36,7 +37,7 @@
 		if (saveSelection) {
 			localStorage.setItem("selected-country",selectedCountry)
 		}
-		cleanupRedcountry
+		cleanupRedcountry()
 		$("." + selectedCountry).attr("class", "datamaps-subunit " + selectedCountry + " redify")
 		redCountry = document.getElementsByClassName("redify")[0]
 	})
